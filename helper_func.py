@@ -60,29 +60,30 @@ async def get_messages(client, message_ids):
         messages.extend(msgs)
     return messages
 
+
+
 async def get_message_id(client, message):
-    if message.forward_from_chat:
-        if message.forward_from_chat.id == client.db_channel.id:
+    try:
+        if message.forward_from_chat and message.forward_from_chat.id == client.db_channel.id:
             return message.forward_from_message_id
-        else:
-            return 0
-    elif message.forward_sender_name:
-        return 0
-    elif message.text:
-        pattern = "https://telegram.me/(?:c/)?(.*)/(\d+)"
-        matches = re.match(pattern,message.text)
-        if not matches:
-            return 0
-        channel_id = matches.group(1)
-        msg_id = int(matches.group(2))
-        if channel_id.isdigit():
-            if f"-100{channel_id}" == str(client.db_channel.id):
-                return msg_id
-        else:
-            if channel_id == client.db_channel.username:
-                return msg_id
-    else:
-        return 0
+
+        if message.text:
+            pattern = r"https://telegram.me/(?:c/)?(.*)/(\d+)"
+            matches = re.match(pattern, message.text)
+
+            if matches:
+                channel_id, msg_id = matches.groups()
+                if channel_id.isdigit() and f"-100{channel_id}" == str(client.db_channel.id):
+                    return int(msg_id)
+                elif not channel_id.isdigit() and channel_id == client.db_channel.username:
+                    return int(msg_id)
+
+    except Exception as e:
+        # Log the exception for debugging purposes
+        print(f"An error occurred: {e}")
+
+    return 0
+
 
 
 def get_readable_time(seconds: int) -> str:
