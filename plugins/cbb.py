@@ -10,7 +10,14 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>PERVERTS</b>",
+            text = f"""<blockquote expandable> <b>
+🤖 ᴍʏ ɴᴀᴍᴇ: PLAY BOT
+◈ ᴏᴡɴᴇʀ: @Black_walker_id
+◈ ʟᴀɴɢᴜᴀɢᴇ: Pʏᴛʜᴏɴ 3
+◈ ʟɪʙʀᴀʀʏ: Pʏʀᴏɢʀᴀᴍ ᴠ2
+◈ ᴅᴀᴛᴀʙᴀsᴇ: Mᴏɴɢᴏ ᴅʙ
+🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ: @searchingshiv
+</b></blockquote>""",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
