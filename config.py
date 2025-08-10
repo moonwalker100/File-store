@@ -37,10 +37,12 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "<blockquote>⚡ Hᴇʏ, {Hello}
-
-I ᴀᴍ ᴀɴ ᴀᴅᴠᴀɴᴄᴇ ғɪʟᴇ sʜᴀʀᴇ ʙᴏᴛ V2.
-Tʜᴇ ʙᴇsᴛ ᴘᴀʀᴛ ɪs ɪ ᴀᴍ ᴀʟsᴏ sᴜᴘᴘᴏʀᴛ ʀᴇǫᴜᴇsᴛ ғᴏʀᴄᴇsᴜʙ ғᴇᴀᴛᴜʀᴇ, Tᴏ ᴋɴᴏᴡ ᴅᴇᴛᴀɪʟᴇᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴄʟɪᴄᴋ ᴀʙᴏᴜᴛ ᴍᴇ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ᴍʏ ᴀʟʟ ᴀᴅᴠᴀɴᴄᴇ ғᴇᴀᴛᴜʀᴇs.</blockquote>")
+START_PIC = os.environ.get("START_PIC","")
+START_MSG = os.environ.get("START_MESSAGE", "<blockquote>Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.</blockquote>")
+try:
+    ADMINS = [int(x) for x in os.environ.get("ADMINS", "").split()]
+except ValueError:
+    raise Exception("Your ADMINS list does not contain valid integers.")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "").split()):
