@@ -14,11 +14,14 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 media="https://envs.sh/h7m.jpg",  # Replace with your photo URL or local file path
                 caption=f"""<blockquote expandable> <b>
 🤖 ᴍʏ ɴᴀᴍᴇ: PLAY BOT
-◈ ᴏᴡɴᴇʀ: @Black_walker_id
-◈ ʟᴀɴɢᴜᴀɢᴇ: Pʏᴛʜᴏɴ 3
-◈ ʟɪʙʀᴀʀʏ: Pʏʀᴏɢʀᴀᴍ ᴠ2
-◈ ᴅᴀᴛᴀʙᴀsᴇ: Mᴏɴɢᴏ ᴅʙ
-🧑‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ: @searchingshiv
+╭───────────⍟
+├➽ Dᴇᴠᴇʟᴏᴩᴇʀ : ᴜɴᴋɴᴏᴡɴ 
+├➽ Lɪʙʀᴀʀy : Pʏʀᴏɢʀᴀᴍ
+├➽ Lᴀɴɢᴜᴀɢᴇ : Pʏᴛʜᴏɴ 3
+├➽ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ : ꜱᴏʟᴏ ᴄᴏᴅᴇ
+├➽ Mᴀɪɴ Cʜᴀɴɴᴇʟ : ᴛʜɪꜱ ᴄʜᴀɴɴᴇʟ 
+├➽ ᴏᴡɴᴇʀ : Bʟᴀᴄᴋ Wᴀʟᴋᴇʀ 🜲
+╰───────────────⍟
 </b></blockquote>"""
             ),
             reply_markup=InlineKeyboardMarkup(
