@@ -15,7 +15,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 caption=f"""<blockquote expandable> <b>
 🤖 ᴍʏ ɴᴀᴍᴇ: PLAY BOT
 ╭───────────⍟
-├➽ Dᴇᴠᴇʟᴏᴩᴇʀ : </b> <a href='tg://user?id={}'>ᴜɴᴋɴᴏᴡɴ</a>",
+├➽ Dᴇᴠᴇʟᴏᴩᴇʀ : </b> <a href='tg://user?id={921365334}'>ᴜɴᴋɴᴏᴡɴ</a>",
 ├➽ Lɪʙʀᴀʀy : </b> <a href='https://pyrogram.org'>Pyrogram {__version__}</a>",
 ├➽ Lᴀɴɢᴜᴀɢᴇ : Pʏᴛʜᴏɴ 3
 ├➽ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ : ꜱᴏʟᴏ ᴄᴏᴅᴇ
